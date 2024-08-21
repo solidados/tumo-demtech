@@ -1,33 +1,45 @@
+import { useEffect, useState } from 'react';
+import RoadmapSlider from '../roadmapSlider/RoadmapSlider';
+
+import image1 from './image1.jpg';
+import image2 from './image2.jpg';
+import image3 from './image3.jpg';
 import './section.scss';
 
 const SectionThree = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % 3);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const images = [image1, image2, image3];
   return (
     <section className="section-three">
-			<div className="container">
-				<div className="section-three-wrapper">
-					<div className="section-three-left">
-						<h3>Looking For An Attorney?</h3>
-						<p>Take advantage of Avvo's search technology, detailed profiles, ratings, and reviews to evaluate and connect with attorneys.</p>
-            <div className="steps">
-              <div className="step">
-                <h4>1. Search for Lawyers in Your Area</h4>
-                <p>Enter the type of lawyer you need (practice area) and your location to start browsing profiles</p>
-              </div>
-              <div className="step-two">
-                <h4>2. Read Reviews from Past Clients</h4>
-                <p>Get detailed profiles with all of the information you need to make a hiring decision, including price, reviews, and an unbiased Avvo Rating</p>
-              </div>
-              <div className="step-three">
-                <h4>3. Book a Consultation Online</h4>
-                <p>Contact an attorney or book a consultation easily through our site so you can get the help you need without the stress</p>
-              </div>
-            </div>
+      <div className="container">
+        <div className="section-three-wrapper">
+          <div className="section-three-left">
+            <h3>Looking For An Attorney?</h3>
+            <p>
+              Take advantage of RightAid's search technology, detailed profiles,
+              ratings, and reviews to evaluate and connect with attorneys.
+            </p>
+            <RoadmapSlider
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
           </div>
-				<div className="section-three-right"></div>
-			</div>
-		</div>
-	</section>
+          <div className="section-three-right">
+            <img src={images[activeIndex]} alt={`Slide ${activeIndex + 1}`} />
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
 export default SectionThree;
