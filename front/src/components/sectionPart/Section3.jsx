@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import RoadmapSlider from '../roadmapSlider/RoadmapSlider';
+import { Button } from '@mui/material';
 
 import image1 from './image1.jpg';
 import image2 from './image2.jpg';
@@ -32,6 +33,7 @@ const SectionThree = () => {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             />
+            <Button variant="contained">Find a Lawyer</Button>
           </div>
           <div className="section-three-right">
             <img src={images[activeIndex]} alt={`Slide ${activeIndex + 1}`} />
