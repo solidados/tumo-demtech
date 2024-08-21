@@ -1,8 +1,8 @@
 import './section.scss'
 
-export default function SectionOne() {
+const SectionOne = () => {
   return (
-    <div className='section-one'>
+    <section className='section-one'>
       <div className="container">
         <div className="left-side">
           <h1>Connect with attorneys.</h1>
@@ -17,6 +17,8 @@ export default function SectionOne() {
             <img src="https://cimg0.ibsrv.net/cimg/www.avvo.com/639x510_100/132/default-hero-1440-724132.png" alt="" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
+
+export default SectionOne;

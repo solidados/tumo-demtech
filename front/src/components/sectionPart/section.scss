@@ -1,5 +1,5 @@
 .section {
-	&-one, &-two {
+	&-one, &-two, &-three {
 		width: 100%;
 	
 		& >.container {
@@ -36,17 +36,16 @@
 		}
 
 		.right-side img {
-			// margin-right: -50px;
-			opacity: 0; /* Initially hidden */
-			transform: translateX(50px); /* Initial position (offscreen) */
-			animation: fadeInSlideIn 1.5s forwards ease-in-out; /* Animation applied */
+			opacity: 0;
+			transform: translateX(50px);
+			animation: fadeInSlideIn 1.5s forwards ease-in-out;
 		}
 	}
 
 	&-two {
 		width: 100%;
 		padding: 20px 0;
-  	background-color: #f9f9f9;
+		background-color: white;
 		
 		&-wrapper {
 			display: grid;
@@ -66,6 +65,7 @@
       background-repeat: no-repeat;
 			background-size: 70%;
 			background-position: 0 50%;
+			overflow: hidden;
 		}
 
 		&-right {
@@ -81,7 +81,7 @@
 				margin-bottom: 0.8em;
 				font-size: 1.3rem;
 				font-weight: 400;
-				color: #f27760;
+				color: #393f48;
 			}
 
 			& p {
@@ -90,13 +90,31 @@
 				line-height: 1.5;
 				color: #445c61;
 			}
+
+			& p:last-of-type {
+				margin-bottom: 3em;
+			}
 		}
+	}
+
+	&-three {
+		width: 100%;
+		padding: 20px 0;
+		background-color: #f9f9f9;
+
+		&-wrapper {
+			display: grid;
+    	grid-template-columns: 1fr 1fr;
+    	align-items: center;
+    	gap: 20px;
+		}
+
 	}
 }
 
 @keyframes fadeInSlideIn {
     to {
         opacity: 1;
-        transform: translateX(0); /* Slide to original position */
+        transform: translateX(0);
     }
 }
