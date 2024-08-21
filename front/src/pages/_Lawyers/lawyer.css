@@ -39,7 +39,9 @@ h1 {
   width: 300px; /* Fixed width for the cards */
   display: flex;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   border: 1px solid #e0e0e0;
 }
 

@@ -38,7 +38,9 @@ h1 {
   width: 300px; /* Fixed width for the cards */
   display: flex;
   align-items: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   border: 1px solid #e0e0e0;
 }
 
@@ -89,12 +91,10 @@ h1 {
   }
 }
 
-
 .blue-banner {
-  background-color: #00447B;
+  background-color: #00447b;
   padding: 1rem 0;
 }
-
 
 .bcrumb {
   display: block;
@@ -110,10 +110,13 @@ h1 {
   padding: 0 1.2rem;
 }
 
-@media only screen and (min-width: 768px), only screen and (min-width: 992px), only screen and (min-width: 1200px){
-.header-syle h1 {
+@media only screen and (min-width: 768px),
+  only screen and (min-width: 992px),
+  only screen and (min-width: 1200px) {
+  .header-syle h1 {
     margin: 0 0 1rem;
-}}
+  }
+}
 
 #js-breadcrumbs.breadcrumbs {
   display: block;
@@ -126,23 +129,24 @@ h1 {
   margin-top: 0;
 }
 
-.breadcrumbs>li {
+.breadcrumbs > li {
   display: inline-block;
   padding: 0 1px;
   line-height: 0.9;
 }
 
-.breadcrumbs>li[itemprop=itemListElement] a, .breadcrumbs>li[itemprop=itemListElement] span {
+.breadcrumbs > li[itemprop='itemListElement'] a,
+.breadcrumbs > li[itemprop='itemListElement'] span {
   vertical-align: middle;
 }
 .bcrumb .breadcrumbs li a {
-  color: #26DDFC;
+  color: #26ddfc;
 }
 
 a {
-  color: #005C99;
+  color: #005c99;
 }
-a { 
+a {
   color: #008cc9;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -150,10 +154,10 @@ a {
   text-decoration: none;
 }
 
-.breadcrumbs>li[itemprop=itemListElement] a, .breadcrumbs>li[itemprop=itemListElement] span {
+.breadcrumbs > li[itemprop='itemListElement'] a,
+.breadcrumbs > li[itemprop='itemListElement'] span {
   vertical-align: middle;
 }
-
 
 .header-syle {
   color: white;
