@@ -1,23 +1,24 @@
 /* Basic styles for the page */
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
-}
+} */
 
 /* Container for the user list */
-.container {
+/* .container {
   max-width: 1200px;
   margin: 20px auto;
   padding: 0 20px;
-}
+} */
 
 /* Heading style */
 h1 {
-  color: white;
+  text-align: center;
+  color: #333;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-weight: 600;
 }
 
@@ -87,77 +88,4 @@ h1 {
   .user-card {
     width: 100%; /* Full width for small screens */
   }
-}
-
-
-.blue-banner {
-  background-color: #00447B;
-  padding: 1rem 0;
-}
-
-
-.bcrumb {
-  display: block;
-  padding: 0 1.2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.header-syle {
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.2rem;
-}
-
-@media only screen and (min-width: 768px), only screen and (min-width: 992px), only screen and (min-width: 1200px){
-.header-syle h1 {
-    margin: 0 0 1rem;
-}}
-
-#js-breadcrumbs.breadcrumbs {
-  display: block;
-  font-size: 14px;
-  margin: 0.5rem 0;
-  height: 26px;
-  overflow: clip;
-  padding: 0;
-  width: 100%;
-  margin-top: 0;
-}
-
-.breadcrumbs>li {
-  display: inline-block;
-  padding: 0 1px;
-  line-height: 0.9;
-}
-
-.breadcrumbs>li[itemprop=itemListElement] a, .breadcrumbs>li[itemprop=itemListElement] span {
-  vertical-align: middle;
-}
-.bcrumb .breadcrumbs li a {
-  color: #26DDFC;
-}
-
-a {
-  color: #005C99;
-}
-a { 
-  color: #008cc9;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  text-decoration: none;
-}
-
-.breadcrumbs>li[itemprop=itemListElement] a, .breadcrumbs>li[itemprop=itemListElement] span {
-  vertical-align: middle;
-}
-
-
-.header-syle {
-  color: white;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.2rem;
 }

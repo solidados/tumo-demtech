@@ -1,3 +1,4 @@
+
 import './section.scss';
 
 const SectionTwo = () => {
@@ -5,7 +6,9 @@ const SectionTwo = () => {
 		<div className="section-two">
 				<div className="container">
 					<div className="section-two-wrapper">
-						<div className="section-two-left"></div>
+						<div className="section-two-left">
+							{/* <img src="./section-2-help.webp" alt="" /> */}
+						</div>
 						<div className="section-two-right">
 							<h4>Don't have time to research?</h4>
 							<h3>Let us find a RightOne for you</h3>

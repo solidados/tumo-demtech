@@ -45,7 +45,7 @@
 
 	&-two {
 		width: 100%;
-		padding: 60px 0;
+		padding: 20px 0;
   	background-color: #f9f9f9;
 		
 		&-wrapper {
@@ -58,6 +58,14 @@
 				grid-template-columns: 1fr;
 				text-align: center;
 			}
+		}
+
+		&-left {
+			height: 20em;
+			background-image: url(./section-2-help.webp);
+      background-repeat: no-repeat;
+			background-size: 70%;
+			background-position: 0 50%;
 		}
 
 		&-right {

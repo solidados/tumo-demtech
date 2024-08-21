@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './lawyer.css';
 import { Link } from 'react-router-dom';
+
+import './lawyer.css';
+
 
 export default function Lawyer() {
   const [users, setUsers] = useState([]);
@@ -25,23 +27,8 @@ export default function Lawyer() {
   if (!users.length) return <div>Loading...</div>;
 
   return (
-   <>
-   <div class="blue-banner">
-    <div class="bcrumb">
-      <ol id="js-breadcrumbs" class="breadcrumbs">
-        <li itemprop="itemListElement">
-          <a href="" itemprop="item"><span itemprop="name">Our Services</span></a>
-        </li>
-        <li itemprop="itemListElement">
-          <a href="/chapter-11-bankruptcy-lawyer.html" itemprop="item"><span itemprop="name"> &rarr;  Find a Lawyer</span></a>
-        </li>
-      </ol>
-    </div>
-    <header class="header-syle">
-      <h1>Lawyers</h1>
-    </header>
-  </div>
-<div className="container">
+    <div className="container">
+      <h1>All Users</h1>
       <div className="user-list">
         {users.map(user => (
           <div key={user._id} className="user-card">
@@ -57,6 +44,6 @@ export default function Lawyer() {
           </div>
         ))}
       </div>
-    </div> </>
+    </div>
   );
 }
