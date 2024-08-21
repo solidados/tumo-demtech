@@ -1,41 +1,35 @@
-/* Ensure that these styles are correctly applied */
-
+/* Popup overlay to cover the entire screen */
 .popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
+/* Container for the popup content */
 .popup-container {
   background: white;
-  padding: 20px;
   border-radius: 8px;
-  width: 300px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-.popup-close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
+/* Title of the popup */
 .popup-title {
-  margin-top: 0;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333;
 }
 
+/* Form styling */
 .popup-form {
   display: flex;
   flex-direction: column;
@@ -43,24 +37,65 @@
 
 .popup-label {
   margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
 }
 
 .popup-input {
+  width: 100%;
+  padding: 10px;
   margin-top: 5px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.popup-input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .popup-submit-button {
-  background: blue;
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
   padding: 10px;
+  border-radius: 4px;
   cursor: pointer;
+  margin-top: 10px;
+  font-size: 1em;
 }
 
-.popup-error, .popup-success {
-  color: red;
+.popup-submit-button:hover {
+  background-color: #0056b3;
+}
+
+.popup-close-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup-close-button:hover {
+  background-color: #c62828;
+}
+
+.popup-error,
+.popup-success {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.popup-error {
+  color: #f44336;
+}
+
+.popup-success {
+  color: #4caf50;
 }
