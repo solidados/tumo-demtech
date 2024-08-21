@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './popup.css';
 
-
 const Popup = ({ closeForm, onRegisterSuccess }) => {
   const [formData, setFormData] = useState({
     fullname: '',
@@ -11,7 +10,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
     birthday: '',
     email: '',
     phone: '',
-    password: ''
+    password: '',
   });
 
   const [error, setError] = useState(null);
@@ -20,7 +19,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -31,9 +30,9 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
       const response = await fetch('http://localhost:5000/api/auth/register', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -49,14 +48,18 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
           birthday: '',
           email: '',
           phone: '',
-          password: ''
+          password: '',
         });
-        
+
         if (typeof onRegisterSuccess === 'function') {
           onRegisterSuccess(formData.fullname); // Pass the username to the parent
         }
       } else {
-        setError(data.errors ? data.errors[0].msg : data.msg || 'Failed to register user');
+        setError(
+          data.errors
+            ? data.errors[0].msg
+            : data.msg || 'Failed to register user'
+        );
         setSuccess(null);
       }
     } catch (error) {
@@ -71,9 +74,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
       <div className="popup-container">
         <h2 className="popup-title">Register</h2>
         <form onSubmit={handleSubmit} className="popup-form">
-          
-
-<label className="popup-label">
+          <label className="popup-label">
             Full Name:
             <input
               type="text"
@@ -161,30 +162,21 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
               required
             />
           </label>
-          <button type="submit" className="popup-submit-button">Register</button>
+          <button type="submit" className="popup-submit-button">
+            Register
+          </button>
         </form>
         {error && <p className="popup-error">{error}</p>}
         {success && <p className="popup-success">{success}</p>}
-        <button onClick={closeForm} className="popup-close-button">Close</button>
+        <button onClick={closeForm} className="popup-close-button">
+          Close
+        </button>
       </div>
     </div>
   );
 };
 
 export default Popup;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from 'react';
 // import './popup.css';

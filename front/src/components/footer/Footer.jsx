@@ -7,9 +7,9 @@ import './footer.scss'; // Make sure to update your CSS file accordingly.
 
 export default function Footer() {
   return (
-    <div className='footer'>
-      <div className='container'>
-        <div className='footer-section'>
+    <div className="footer">
+      <div className="container">
+        <div className="footer-section">
           <h4>Company</h4>
           <ul>
             <li>About Us</li>
@@ -18,7 +18,7 @@ export default function Footer() {
             <li>Contact</li>
           </ul>
         </div>
-        <div className='footer-section'>
+        <div className="footer-section">
           <h4>Services</h4>
           <ul>
             <li>Legal Advice</li>
@@ -27,7 +27,7 @@ export default function Footer() {
             <li>Legal Forms</li>
           </ul>
         </div>
-        <div className='footer-section'>
+        <div className="footer-section">
           <h4>Support</h4>
           <ul>
             <li>Help Center</li>
@@ -36,16 +36,16 @@ export default function Footer() {
             <li>Privacy Policy</li>
           </ul>
         </div>
-        <div className='footer-section social'>
+        <div className="footer-section social">
           <h4>Follow Us</h4>
-          <div className='social-icons'>
+          <div className="social-icons">
             <FacebookIcon />
             <TwitterIcon />
             <LinkedInIcon />
           </div>
         </div>
-      <small>© RightAid.</small>
-      <small className='small'>All Rights Reserved 2024</small>
+        <small>© RightAid.</small>
+        <small className="small">All Rights Reserved 2024</small>
       </div>
     </div>
   );

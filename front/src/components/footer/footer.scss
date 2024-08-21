@@ -3,10 +3,10 @@
   padding: 20px 0;
   background-color: #666;
   color: #f8f9fa;
-  & >.container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &-section {
@@ -23,7 +23,7 @@
     & ul {
       list-style: none;
       padding: 0;
-      
+
       & li {
         padding: 5px 0;
         font-size: 0.9rem;
