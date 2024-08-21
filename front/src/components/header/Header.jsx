@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import Popup from '../popup/Popup';
-import logo from './bglogo1.png'; // Import the logo image
-import { Link } from 'react-router-dom'; // Import Link
+import logo from './bglogo1.png';
+import { Link, NavLink } from 'react-router-dom'; 
 
 import './header.scss';
 
 export default function Header() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [user, setUser] = useState(null); // State to store the registered user
+  const [user, setUser] = useState(null);
 
   const openPopup = () => {
     setIsPopupOpen(true);
@@ -30,20 +30,23 @@ export default function Header() {
 
       <div className='logo'>
         <Link to={"/"}>
-          <img src={logo} alt="Logo" /> {/* Use the imported image here */}
+          <img src={logo} alt="Logo" />
         </Link>
       </div>
       <nav className='nav'>
         <ul>
           <li>
-            <a href='#'>About Us</a>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to='/about'>About Us</NavLink>
             <ul className='dropdown'>
-              <li><a href='#'>Our Mission</a></li>
-              <li><a href='#'>Our Team</a></li>
+              <li><Link to='/mission'>Our Mission</Link></li>
+              <li><Link to='/team'>Our Team</Link></li>
             </ul>
           </li>
           <li>
-            <a href='#'>Our Service</a>
+            <NavLink to='/service'>Our Service</NavLink>
             <ul className='dropdown'>
               <li>
                 <Link to="/lawyer">Find The Lawyer</Link> {/* Use Link for navigation */}
@@ -52,16 +55,16 @@ export default function Header() {
           </li>
 
           <li>
-            <a href='#'>Blog</a>
+            <NavLink to='/blog'>Blog</NavLink>
             <ul className='dropdown'>
             </ul>
           </li>
 
           <li>
-            <a href='#'>Contact Us</a>
+            <NavLink to='/contact'>Contact Us</NavLink>
             <ul className='dropdown'>
-              <li><a href='#'>Our Location</a></li>
-              <li><a href='#'>Our Team</a></li>
+              <li><Link to='/location'>Our Location</Link></li>
+              <li><Link to='/team'>Our Team</Link></li>
             </ul>
           </li>
         </ul>
