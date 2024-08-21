@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import './header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import Popup from '../popup/Popup';
 import logo from './bglogo1.png'; // Import the logo image
 import { Link } from 'react-router-dom'; // Import Link
+
+import './header.scss';
 
 export default function Header() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -25,8 +26,12 @@ export default function Header() {
 
   return (
     <div className='header'>
+      <div className="container">
+
       <div className='logo'>
-        <img src={logo} alt="Logo" /> {/* Use the imported image here */}
+        <Link to={"/"}>
+          <img src={logo} alt="Logo" /> {/* Use the imported image here */}
+        </Link>
       </div>
       <nav className='nav'>
         <ul>
@@ -73,6 +78,7 @@ export default function Header() {
           </button>
         )}
         {isPopupOpen && <Popup closeForm={closePopup} onRegisterSuccess={handleRegistrationSuccess} />}
+      </div>
       </div>
     </div>
   );

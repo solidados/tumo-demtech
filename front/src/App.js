@@ -1,10 +1,11 @@
-import './App.css';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
-import Section1 from './components/sectionPart/Section1';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Lawyer from './pages/Lawyers/Lawyer';
+import Header from './components/header/Header';
+import Home from './pages/Home';
+import Footer from './components/footer/Footer';
 import LawyerProfile from './pages/Lawyer/LayerProfile';
+import Lawyer from './pages/Lawyers/Lawyer';
+
+import './App.scss';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Section1 />} />
+          <Route path="/" element={<Home />} />
           <Route path="/lawyer" element={<Lawyer />} />
           <Route path="/lawyerprofile/:userId" element={<LawyerProfile />} /> {/* Dynamic route */}
         </Routes>

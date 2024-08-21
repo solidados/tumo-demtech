@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './lawyer.css';
 import { Link } from 'react-router-dom';
+
+import './lawyer.css';
+
 
 export default function Lawyer() {
   const [users, setUsers] = useState([]);

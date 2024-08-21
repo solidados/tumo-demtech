@@ -1,13 +1,14 @@
 import React from 'react';
-import './footer.css'; // Make sure to update your CSS file accordingly.
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import './footer.scss'; // Make sure to update your CSS file accordingly.
+
 export default function Footer() {
   return (
     <div className='footer'>
-      <div className='footer-container'>
+      <div className='container'>
         <div className='footer-section'>
           <h4>Company</h4>
           <ul>
