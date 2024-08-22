@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import RoadmapSlider from '../roadmapSlider/RoadmapSlider';
 import { Button } from '@mui/material';
 
@@ -9,6 +10,7 @@ import './section.scss';
 
 const SectionThree = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,6 +21,11 @@ const SectionThree = () => {
   }, []);
 
   const images = [image1, image2, image3];
+
+  const handleFindLawyer = () => {
+    navigate('/lawyer');
+  };
+
   return (
     <section className="section-three">
       <div className="container">
@@ -33,7 +40,9 @@ const SectionThree = () => {
               activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
             />
-            <Button variant="contained">Find a Lawyer</Button>
+            <Button variant="contained" onClick={handleFindLawyer}>
+              Find a Lawyer
+            </Button>
           </div>
           <div className="section-three-right">
             <img src={images[activeIndex]} alt={`Slide ${activeIndex + 1}`} />
