@@ -20,7 +20,7 @@ const SectionTwo = () => {
               Just tell us your query, and we'll connect you with an attorney
               who's practice of area is aligning with your specific dispute.
             </p>
-            <Button variant="contained">Call AI</Button>
+            <Button className="call-btn" variant="contained">Call AI</Button>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './footer.scss'; // Make sure to update your CSS file accordingly.
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="container">
@@ -44,8 +45,9 @@ export default function Footer() {
             <LinkedInIcon />
           </div>
         </div>
-        <small>© RightAid.</small>
-        <small className="small">All Rights Reserved 2024</small>
+      </div>
+      <div className="container copyroght">
+        <small>© RightAid. All Rights Reserved {currentYear}</small>
       </div>
     </div>
   );

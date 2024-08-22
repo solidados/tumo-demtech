@@ -1,5 +1,5 @@
 .logo img {
-  width: 6rem;
+  width: 7rem;
   transition: transform 0.3s;
   background-size: cover;
 }
@@ -55,13 +55,14 @@
 
       &:hover .dropdown {
         display: block;
+        width: max-content;
       }
 
       & a {
         text-decoration: none;
         color: #393f48;
 
-        &:hover {
+        &:hover:not(.active) {
           text-decoration: underline;
         }
       }

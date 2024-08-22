@@ -65,14 +65,6 @@ export default function Header() {
 
             <li>
               <NavLink to="/contact">Contact Us</NavLink>
-              <ul className="dropdown">
-                <li>
-                  <Link to="/location">Our Location</Link>
-                </li>
-                <li>
-                  <Link to="/team">Our Team</Link>
-                </li>
-              </ul>
             </li>
           </ul>
         </nav>
