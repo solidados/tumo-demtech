@@ -74,8 +74,13 @@ h1 {
   font-size: 0.9rem;
 }
 
+.containerr {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
 .user-card a {
-  color: #007bff;
+  color: #5db1c7;
   font-weight: 500;
   text-decoration: none;
 }
@@ -92,7 +97,7 @@ h1 {
 }
 
 .blue-banner {
-  background-color: #00447b;
+  background-color: #3c6f92;;
   padding: 1rem 0;
 }
 
@@ -108,6 +113,132 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.2rem;
+}
+
+/* Basic styles for the page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Container for the user list */
+.containerr {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+
+/* Flexbox container for user cards */
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+}
+
+/* Style for individual user cards */
+.user-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Fixed width for the cards */
+  display: flex;
+  align-items: center;
+  position: relative; /* Added to position the verified badge */
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e0e0e0;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.user-card .info {
+  flex: 1;
+}
+
+.user-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.user-card p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.user-card a {
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.user-card a:hover {
+  text-decoration: underline;
+}
+
+/* Verified badge styles */
+.verified-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.verified-badge span {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .user-card {
+    width: 100%; /* Full width for small screens */
+  }
+}
+
+
+/* Verified badge styles */
+.verified-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.verified-badge span {
+  margin-right: 5px;
+  font-size: 1rem;
 }
 
 @media only screen and (min-width: 768px),
@@ -140,7 +271,7 @@ h1 {
   vertical-align: middle;
 }
 .bcrumb .breadcrumbs li a {
-  color: #26ddfc;
+  color: #5db1c7;
 }
 
 a {

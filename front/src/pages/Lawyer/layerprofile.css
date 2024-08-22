@@ -14,7 +14,8 @@ body {
   padding: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin-bottom: 21%;
+  margin-top: 27px !important;
+  margin-bottom: 37px !important;
 }
 
 .profile-header {
@@ -31,7 +32,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-right: 20px;
-  border: 2px solid #007bff;
+  border: 2px solid #007BFF;
 }
 
 .profile-info {
@@ -51,7 +52,7 @@ body {
 
 .profile-details h2 {
   margin-top: 20px;
-  color: #007bff;
+  color: #007BFF;
   font-size: 1.5rem;
 }
 
