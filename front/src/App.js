@@ -21,6 +21,7 @@ function App() {
           />{' '}
           {/* Dynamic route */}
         </Routes>
+        <div className="container"></div>
         <Footer />
       </Router>
     </div>
