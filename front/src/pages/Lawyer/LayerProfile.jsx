@@ -37,7 +37,7 @@ export default function LayerProfile() {
           className="profile-avatar" 
         />
         <div className="profile-info">
-          <h1>{user.fullname} {user.lastname}</h1>
+          <h1>{user.fullname} {user.surname}</h1>
           <p>{user.organization}</p>
           <p>{user.email}</p>
           <p>{user.phone}</p>

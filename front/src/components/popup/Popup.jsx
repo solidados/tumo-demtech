@@ -83,6 +83,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
       setSuccess(null);
     }
   };
+  const today = new Date().toISOString().split('T')[0];
 
   return (
     <div className="popup-overlay">
@@ -145,6 +146,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
               value={formData.birthday}
               onChange={handleChange}
               className="popup-input"
+              max={today}
               required
             />
           </label>
@@ -165,7 +167,7 @@ const Popup = ({ closeForm, onRegisterSuccess }) => {
             <input
               type="text"
               name="phone"
-              placeholder='+374 11 111111'
+              placeholder='+37411111111'
               value={formData.phone}
               onChange={handleChange}
               className="popup-input"

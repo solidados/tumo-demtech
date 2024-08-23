@@ -270,8 +270,8 @@ body {
 .breadcrumbs > li[itemprop='itemListElement'] span {
   vertical-align: middle;
 }
-.bcrumb .breadcrumbs li a {
-  color: #5db1c7;
+.bcrumb .breadcrumbs li {
+  color: #f9f9f9;
 }
 
 a {

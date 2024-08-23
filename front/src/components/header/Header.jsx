@@ -38,33 +38,16 @@ export default function Header() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About Us</NavLink>
-              <ul className="dropdown">
-                <li>
-                  <Link to="/mission">Our Mission</Link>
-                </li>
-                <li>
-                  <Link to="/team">Our Team</Link>
-                </li>
-              </ul>
+              <NavLink to="/lawyer">Find a Lawyer</NavLink>
             </li>
             <li>
-              <NavLink to="/service">Our Service</NavLink>
-              <ul className="dropdown">
-                <li>
-                  <Link to="/lawyer">Find The Lawyer</Link>{' '}
-                  {/* Use Link for navigation */}
-                </li>
-              </ul>
+              <NavLink to="/blog" className="headerItem">Blog</NavLink>
             </li>
-
             <li>
-              <NavLink to="/blog">Blog</NavLink>
-              <ul className="dropdown"></ul>
+              <NavLink to="/about" className="headerItem">About Us</NavLink>
             </li>
-
             <li>
-              <NavLink to="/contact">Contact Us</NavLink>
+              <NavLink to="/contact" className="headerItem">Contact Us</NavLink>
             </li>
           </ul>
         </nav>

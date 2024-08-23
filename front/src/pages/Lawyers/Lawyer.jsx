@@ -31,14 +31,10 @@ export default function Lawyer() {
     <div class="bcrumb">
       <ol id="js-breadcrumbs" class="breadcrumbs">
         <li itemprop="itemListElement">
-          <a href="" itemprop="item">
-            <span itemprop="name">Our Services</span>
-          </a>
+          <span itemprop="name">Our Services</span>
         </li>
         <li itemprop="itemListElement">
-          <a href="/chapter-11-bankruptcy-lawyer.html" itemprop="item">
-            <span itemprop="name"> &rarr; Find a Lawyer</span>
-          </a>
+          <span itemprop="name"> &rarr; Find a Lawyer</span>
         </li>
       </ol>
     </div>
@@ -61,7 +57,7 @@ export default function Lawyer() {
                 className="user-avatar" 
               />
               <div className="info">
-                <h2>{user.fullname} {user.lastname}</h2>
+                <h2>{user.fullname} {user.surname}</h2>
                 <p>Email: {user.email}</p>
                 <p>Phone: {user.phone}</p>
                 <p>Organization: {user.organization}</p>
