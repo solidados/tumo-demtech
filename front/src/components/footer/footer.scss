@@ -1,12 +1,18 @@
 .footer {
+  padding: 10px 0;
+  & > .copyroght {
+    //padding: 0 40px
+  }
   width: 100%;
   padding: 20px 0;
   background-color: #666;
   color: #f8f9fa;
-  & >.container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  & > .container {
+    padding-top: 40px;
+    //padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   &-section {
@@ -23,7 +29,7 @@
     & ul {
       list-style: none;
       padding: 0;
-      
+
       & li {
         padding: 5px 0;
         font-size: 0.9rem;
@@ -43,10 +49,10 @@
 
   & svg {
     font-size: 24px;
-    color: #555;
+    color: #f8f9fa;
 
     &:hover {
-      color: #007bff;
+      color: #46a0bd;
       cursor: pointer;
     }
   }

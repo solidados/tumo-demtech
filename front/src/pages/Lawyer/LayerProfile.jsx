@@ -30,9 +30,14 @@ export default function LayerProfile() {
   return (
     <div className="profile-container">
       <div className="profile-header">
-        <img src={user.avatar || 'default-avatar.png'} alt={`${user.fullname} ${user.lastname}`} className="profile-avatar" />
+        {/* Use the photoPath directly from the database */}
+        <img 
+          src={user.photoPath || 'default-avatar.png'} 
+          alt={`${user.fullname} ${user.lastname}`} 
+          className="profile-avatar" 
+        />
         <div className="profile-info">
-          <h1>{user.fullname} {user.lastname}</h1>
+          <h1>{user.fullname} {user.surname}</h1>
           <p>{user.organization}</p>
           <p>{user.email}</p>
           <p>{user.phone}</p>

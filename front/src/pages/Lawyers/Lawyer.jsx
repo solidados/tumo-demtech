@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './lawyer.css';
+
 import { Link } from 'react-router-dom';
 
 export default function Lawyer() {
@@ -8,7 +9,7 @@ export default function Lawyer() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchUsers = async () => {  
       try {
         const response = await axios.get('http://localhost:5000/api/users');
         setUsers(response.data);
@@ -24,16 +25,16 @@ export default function Lawyer() {
   if (error) return <div>{error}</div>;
   if (!users.length) return <div>Loading...</div>;
 
-  return (
-   <>
-   <div class="blue-banner">
+  return (     
+    <>
+    <div class="blue-banner">
     <div class="bcrumb">
       <ol id="js-breadcrumbs" class="breadcrumbs">
         <li itemprop="itemListElement">
-          <a href="" itemprop="item"><span itemprop="name">Our Services</span></a>
+          <span itemprop="name">Our Services</span>
         </li>
         <li itemprop="itemListElement">
-          <a href="/chapter-11-bankruptcy-lawyer.html" itemprop="item"><span itemprop="name"> &rarr;  Find a Lawyer</span></a>
+          <span itemprop="name"> &rarr; Find a Lawyer</span>
         </li>
       </ol>
     </div>
@@ -41,22 +42,33 @@ export default function Lawyer() {
       <h1>Lawyers</h1>
     </header>
   </div>
-<div className="container">
+    <div className="containerr">
       <div className="user-list">
         {users.map(user => (
-          <div key={user._id} className="user-card">
-            <img src={user.avatar || 'default-avatar.png'} alt={`${user.fullname} ${user.lastname}`} />
-            <div className="info">
-              <h2>{user.fullname} {user.lastname}</h2>
-              <p>Email: {user.email}</p>
-              <p>Phone: {user.phone}</p>
-              <p>Organization: {user.organization}</p>
-              <p>Birthday: {new Date(user.birthday).toLocaleDateString()}</p>
-              <Link to={`/lawyerprofile/${user._id}`}>View Profile</Link>
+          <Link to={`/lawyerprofile/${user._id}`} key={user._id} className="user-card">
+            <div className="user-card-inner">
+              {/* Add a "Verified" badge */}
+              <div className="verified-badge">
+                <span>✔</span> Verified
+              </div>
+              <img 
+                src={user.photoPath || 'default-avatar.png'} 
+                alt={`${user.fullname} ${user.lastname}`} 
+                className="user-avatar" 
+              />
+              <div className="info">
+                <h2>{user.fullname} {user.surname}</h2>
+                <p>Email: {user.email}</p>
+                <p>Phone: {user.phone}</p>
+                <p>Organization: {user.organization}</p>
+                <p>Birthday: {new Date(user.birthday).toLocaleDateString()}</p>
+                <Link to={`/lawyerprofile/${user._id}`} className="profile-link">View Profile</Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-    </div> </>
+    </div>
+    </>
   );
 }

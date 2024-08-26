@@ -15,8 +15,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/lawyer" element={<Lawyer />} />
-          <Route path="/lawyerprofile/:userId" element={<LawyerProfile />} /> {/* Dynamic route */}
+          <Route
+            path="/lawyerprofile/:userId"
+            element={<LawyerProfile />}
+          />{' '}
+          {/* Dynamic route */}
         </Routes>
+        <div className="container"></div>
         <Footer />
       </Router>
     </div>

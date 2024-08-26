@@ -4,15 +4,20 @@ const User = require('../models/User');
 const Company = require('../models/Company');
 
 // Register User
-exports.register = async (req, res) => {
-  const { fullname, lastname, surname, organization, email, phone, birthday, password } = req.body;
 
+
+exports.register = async (req, res) => {
+  const { fullname, lastname, surname, organization, email, phone, birthday, password ,file } = req.body;
+  if (!req.file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
   try {
     let user = await User.findOne({ email });
 
     if (user) {
       return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
     }
+    const fileUrl = `http://localhost:5000/api/images/${req.file.filename}`;
 
     user = new User({
       fullname,
@@ -22,11 +27,12 @@ exports.register = async (req, res) => {
       email,
       phone,
       birthday,
-      password: await bcrypt.hash(password, 12)  // Hash the password before saving
+      password: await bcrypt.hash(password, 12),
+      photoPath: fileUrl  // Hash the password before saving
     });
 
     await user.save();
-    res.status(201).json({ msg: 'User registered successfully!' });
+    res.status(200).json({ msg: 'User registered successfully!', user:user});
 
   } catch (err) {
     console.error(err.message);
